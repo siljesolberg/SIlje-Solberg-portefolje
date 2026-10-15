@@ -196,9 +196,14 @@
     .navbar.scrolled { border-color: var(--border); }
 
     .nav-logo {
-      font-family: var(--font-serif);
-      font-size: 18px;
-      letter-spacing: .02em;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-logo img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
     }
 
     .nav-links {
@@ -348,6 +353,7 @@
   height: 300px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center 20%;
   margin-bottom: 20px;
   border: 2px solid var(--accent-lt);
   display: block;
@@ -561,9 +567,7 @@
       line-height: 1.7;
     }
 
-    /* =============================================
-       SKILLS
-    ============================================= */
+    /* ferdigheter */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -685,9 +689,7 @@
       gap: 8px;
     }
 
-    /* =============================================
-       CONTACT
-    ============================================= */
+    /* kontakt */
     .contact-inner {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -790,9 +792,7 @@
       margin-top: -4px;
     }
 
-    /* =============================================
-       FOOTER
-    ============================================= */
+    /* footer */
     footer {
       border-top: 1px solid var(--border);
       padding: 32px 0;
@@ -828,9 +828,7 @@
       color: var(--muted);
     }
 
-    /* =============================================
-       MOBILE NAV OVERLAY
-    ============================================= */
+    /* mobil navigasjon overlay */
     .mobile-nav {
       position: fixed;
       inset: 0;
@@ -853,9 +851,7 @@
       font-style: italic;
     }
 
-    /* =============================================
-       RESPONSIVE
-    ============================================= */
+    /* responsiv */
     @media (max-width: 900px) {
       .hero-inner { grid-template-columns: 1fr; }
       .hero-card { display: none; }
@@ -880,11 +876,11 @@
 </head>
 <body>
 
-  <!-- =============================================
-       NAVBAR
-  ============================================= -->
+  <!-- navbar -->
   <nav class="navbar" id="navbar" aria-label="Hovednavigasjon">
-    <a href="#hero" class="nav-logo">SS</a>
+    <a href="#hero" class="nav-logo">
+      <img src="images/ss-logo.png" alt="Silje Solberg – til toppen" width="44" height="44" />
+    </a>
     <ul class="nav-links" role="list">
       <li><a href="#about">Om meg</a></li>
       <li><a href="#experience">Erfaring</a></li>
@@ -905,13 +901,13 @@
     <a href="#contact"    onclick="closeMobileNav()">Kontakt</a>
   </div>
 
+
+  <!-- main content -->
   <main>
-    <!-- =============================================
-         HERO
-    ============================================= -->
+    <!-- overskrift og beskrivelse -->
     <section class="hero section" id="hero">
       <div class="container">
-        <div class="hero-inner">
+        <div class="hero-inner">  
           <div class="hero-content">
             <div class="hero-eyebrow reveal">
               <div class="hero-dot" aria-hidden="true"></div>
@@ -937,15 +933,16 @@
           <!-- Sidebar card -->
           <div class="hero-card reveal" style="transition-delay:.3s" aria-hidden="true">
             <img 
-  src="https://media.licdn.com/dms/image/v2/D4D03AQGl-98OQLdbqw/profile-displayphoto-crop_800_800/B4DZkgeGHgJQAI-/0/1757186385041?e=1778716800&v=beta&t=lb7tpoQFTAjTnsujMsfO2ZvOkdNh_GuQUaNycSegLSE"
+  src="images/silje.jpg"
   alt="Profilbilde av Silje Solberg"
   class="hero-avatar"
 />    
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- =============================================
-         ABOUT
-    ============================================= -->
+    <!-- =om meg -->
     <section class="section" id="about" aria-labelledby="about-title">
       <div class="container">
         <p class="section-label reveal">Hvem er jeg?</p>
@@ -994,18 +991,10 @@
             </article>
           </div>
         </div>
-        <!-- Video lagt til under about -->
-        <div style="margin-top: 40px; display: flex; justify-content: center;">
-          <div style="background: #fff; border-radius: 18px; box-shadow: 0 4px 24px rgba(0,0,0,0.10); padding: 18px; display: inline-block;">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/_qQ1GDt6TqU" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:block; border-radius: 12px;"></iframe>
-          </div>
-        </div>
       </div>
     </section>
 
-    <!-- =============================================
-         EXPERIENCE
-    ============================================= -->
+    <!-- erfaring -->
     <section class="section" id="experience" aria-labelledby="exp-title" style="background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
       <div class="container">
         <p class="section-label reveal">Erfaring</p>
@@ -1013,6 +1002,41 @@
           Roller som har formet <em>meg</em>
         </h2>
         <div class="experience-list">
+
+          <article class="exp-card card reveal" style="transition-delay:.10s">
+            <div class="exp-date">
+              <time>2026 —<br>d.d.</time>
+            </div>
+            <div>
+              <div class="exp-company">Phonero</div>
+              <h3 class="exp-role">Applikasjonsutvikler</h3>
+              <p class="exp-desc">
+                Praksis som applikasjonsutvikler hos Phonero, med fokus på programmering, utvikling og teamarbeid. Rollen ga verdifull erfaring i samarbeid, problemløsning og prosjektarbeid.
+              </p>
+              <div class="exp-tags">
+                <span class="tag">Programmering</span>
+                <span class="tag">Utvikling</span>
+                <span class="tag">Teamarbeid</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="exp-card card reveal" style="transition-delay:.10s">
+            <div class="exp-date">
+              <time>2025 —<br>d.d.</time>
+            </div>
+            <div>
+              <div class="exp-company">Flekkefjord Sparebank</div>
+              <h3 class="exp-role">Summer Intern</h3>
+              <p class="exp-desc">
+                Sommer internship i bankens IT-avdeling med fokus på forbedring og digitalisering av kommunikasjon og arbeidsprosesser. 
+              </p>
+              <div class="exp-tags">
+                <span class="tag">Digitalisering</span>
+                <span class="tag">Arbeidsprosesser</span>
+              </div>
+            </div>
+          </article>
 
           <article class="exp-card card reveal" style="transition-delay:.10s">
             <div class="exp-date">
@@ -1073,9 +1097,7 @@
       </div>
     </section>
 
-    <!-- =============================================
-         EDUCATION
-    ============================================= -->
+    <!-- utdanning -->
     <section class="section" id="education" aria-labelledby="edu-title">
       <div class="container">
         <p class="section-label reveal">Utdanning</p>
@@ -1127,9 +1149,7 @@
       </div>
     </section>
 
-    <!-- =============================================
-         SKILLS
-    ============================================= -->
+    <!-- ferdigheter -->
     <section class="section" id="skills" aria-labelledby="skills-title" style="background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
       <div class="container">
         <p class="section-label reveal">Dette kan jeg</p>
@@ -1227,9 +1247,7 @@
       </div>
     </section>
 
-    <!-- =============================================
-         PROJECTS
-    ============================================= -->
+    <!-- prosjekter -->
     <section class="section" id="projects" aria-labelledby="projects-title">
       <div class="container">
         <p class="section-label reveal">Utvalgte prosjekter</p>
@@ -1258,9 +1276,7 @@
       </div>
     </section>
 
-    <!-- =============================================
-         CONTACT
-    ============================================= -->
+    <!-- kontakt meg -->
     <section class="section" id="contact" aria-labelledby="contact-title" style="background: var(--surface); border-top: 1px solid var(--border);">
       <div class="container">
         <p class="section-label reveal">Ta kontakt</p>
@@ -1311,9 +1327,7 @@
     </section>
   </main>
 
-  <!-- =============================================
-       FOOTER
-  ============================================= -->
+  <!-- footer -->
   <footer>
     <div class="container">
       <div class="footer-inner">
@@ -1329,9 +1343,7 @@
     </div>
   </footer>
 
-  <!-- =============================================
-       JAVASCRIPT
-  ============================================= -->
+  <!-- javascript -->
   <script>
     /* --- Navbar scroll state --- */
     const navbar = document.getElementById('navbar');
