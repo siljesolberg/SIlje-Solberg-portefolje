@@ -350,13 +350,14 @@
     }
 
     .hero-avatar {
-  width: 300px;
-  height: 300px;
+  width: 340px;
+  height: 340px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center 20%;
   margin-bottom: 20px;
   border: 2px solid var(--accent-lt);
+  box-shadow: 0 12px 36px rgba(0,0,0,.24);
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -934,10 +935,7 @@
           <!-- Sidebar card -->
           <div class="hero-card reveal" style="transition-delay:.3s" aria-hidden="true">
             <img 
-  src="images/silje.jpg"
-  alt="Profilbilde av Silje Solberg"
-  class="hero-avatar"
-/>    
+              src="images/silje.jpg" alt="Profilbilde av Silje Solberg" class="hero-avatar"/>    
           </div>
         </div>
       </div>
@@ -1294,16 +1292,17 @@
     <!-- kontakt meg -->
     <section class="section" id="contact" aria-labelledby="contact-title" style="background: var(--surface); border-top: 1px solid var(--border);">
       <div class="container">
-        <p class="section-label reveal">Ta kontakt</p>
-        <h2 class="section-title reveal" id="contact-title" style="transition-delay:.06s">
-          La oss <em>snakke sammen</em>
-        </h2>
         <div class="contact-inner">
-          <div class="contact-info reveal" style="transition-delay:.10s">
-            <p style="font-size:15px; color:var(--muted); margin-bottom:8px; line-height:1.75;">
-              Ta gjerne kontakt dersom du er interresert i en samtale om erfaringen min, studiene mine eller aktuelle muligheter. Du kan nå meg via opplysningene under.
+          <div>
+            <p class="section-label reveal">Ta kontakt</p>
+            <h2 class="section-title reveal" id="contact-title" style="transition-delay:.06s">
+              La oss <em>snakke sammen</em>
+            </h2>
+            <p class="reveal" style="font-size:15px; color:var(--muted); line-height:1.75; transition-delay:.10s">
+              Ta gjerne kontakt dersom du er interresert i en samtale om erfaringen min, studiene mine eller aktuelle muligheter. Du kan nå meg via e-post, LinkedIn eller telefon.
             </p>
-
+          </div>
+          <div class="contact-info reveal" style="transition-delay:.16s">
             <a href="mailto:Silje.solberg@outlook.com" class="contact-item">
               <div class="contact-icon" aria-hidden="true">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
